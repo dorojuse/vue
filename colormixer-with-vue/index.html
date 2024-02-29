@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kata - Color Mixer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <div class="flex">
+                <input class="red" type="range" step="1" min="0" max="255" value="0" v-model="r">
+                <input class="green" type="range" step="1" min="0" max="255" value="0" v-model="g">
+                <input class="blue" type="range" step="1" min="0" max="255" value="0" v-model="b">
+            </div>
+            <p> rgb({{r}},{{g}},{{b}})</p>
+        </header>
+        <main :style="{backgroundColor:`rgb(${r}, ${g}, ${b})`}"></main>
+    </div>
+    <script src="https://unpkg.com/vue@latest"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

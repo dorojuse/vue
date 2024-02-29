@@ -1,9 +1,9 @@
-.body--morning {
+.morning {
   background-color: snow;
   transition: 1s ease-in-out background-color;
 }
 
-.button--morning {
+.morning button {
   all: unset;
   font-family: monospace;
   font-size: 30px;
@@ -21,12 +21,12 @@
   border-radius: 3px;
 }
 
-.body--night {
+.night {
   background-color: #323232;
   transition: 1s ease-in-out background-color;
 }
 
-.button--night {
+.night button {
   all: unset;
   font-family: monospace;
   font-size: 30px;

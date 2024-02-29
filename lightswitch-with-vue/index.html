@@ -8,9 +8,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body id="app" class="body--morning">
-    <button class="button--morning" @click="isItMorning = !isItMorning, active()">Toggle Light</button>
-    <script src="https://unpkg.com/vue@latest"></script>
+<body>
+    <main id="app">
+        <div :class="{morning: isItMorning, night: !isItMorning}">
+            <button @click=" isItMorning=!isItMorning">Toggle Light</button>
+        </div>
+    </main>
+    <script src=" https://unpkg.com/vue@latest"></script>
     <script src="script.js"></script>
 </body>
 

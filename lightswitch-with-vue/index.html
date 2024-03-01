@@ -11,7 +11,7 @@
 <body>
     <main id="app">
         <div :class="{morning: isItMorning, night: !isItMorning}">
-            <button @click=" isItMorning=!isItMorning">Toggle Light</button>
+            <button @click=" isItMorning=!isItMorning, changeText()">Toggle Light</button>
         </div>
     </main>
     <script src=" https://unpkg.com/vue@latest"></script>

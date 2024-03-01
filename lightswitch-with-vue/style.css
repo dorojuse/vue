@@ -44,3 +44,7 @@
   border-radius: 3px;
   box-shadow: 0 0 20px rgb(154, 180, 11);
 }
+
+div {
+  height: 100vh;
+}

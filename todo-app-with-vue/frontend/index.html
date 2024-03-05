@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Todo App</h1>
+    </header>
+    <main id="app">
+        <article class="add">
+            <form id="add-form" @submit.prevent="onAddTodoSubmit()">
+
+                <input value="" id="description" type="text" name="description" minlength="5" required
+                    v-model="newTodoInput">
+                <button type="submit" class="addbtn">Add</button>
+
+            </form>
+        </article>
+        <article class="filter">
+            <h2>Filter & Options</h2>
+            <div class="container">
+                <form id="filter-form"></form>
+                <label>
+                    <input type="radio" name="filter" id="all" value="all" v-model="selectedFilter">All
+                </label>
+                <label>
+                    <input type="radio" name="filter" id="open" value="open" v-model="selectedFilter">Open
+                </label>
+                <label>
+                    <input type="radio" name="filter" id="done" value="done" v-model="selectedFilter">Done
+                </label>
+                </form>
+                <button class="removebtn" @click="removeAllDone()">Remove Done Todos</button>
+            </div>
+        </article>
+        <article class="todos">
+            <h2>Your Todos</h2>
+            <ul id="list">
+                <li v-for="todo of filteredTodos" :key="todo.id"><label><input type="checkbox" v-model="todo.done"
+                            @input="onTodoItemCheckedChange(todo)">{{todo.description}}</label></li>
+            </ul>
+        </article>
+    </main>
+    <script src="https://unpkg.com/vue@latest"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
